@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- 부모 박스에  선언하면 자녀 박스들을 내부에서 조정가능하다(디바이스 마다 조정 해줄 필요없다-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flex</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      .fater {
+        display: flex;
+        /*display:flex를 설정해라!!*/
+        /*flex를 설정하면 창에 맞춰서 폭이 조정된다
+        flex-wrap:wrap; 설정 시 새로운 라인으로 옮겨간다(화면 줄여도 폭은 그대로)*/
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        flex-direction: column;
+        /*flex-direction이 row(default)이면 justify는 수평, align은 수직으로 적용
+        flex-direction이 column이면 다 반대*/
+      }
+      .box {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white; /*box내부의 숫자가 조정된다*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+      <!--div.box{$}*10-->
+    </div>
+  </body>
+</html>

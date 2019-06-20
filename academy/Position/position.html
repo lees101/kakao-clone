@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--position: static(default) fixed relative absolute-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Position</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 400%;
+        background-color: red;
+      }
+      /*#boxOne {
+        height: 300px;
+        width: 300px;
+        background-color: yellow;
+        position: static;
+      }
+      #boxtwo {
+        height: 300px;
+        width: 100%;
+        background-color: green;
+        position: fixed;
+        bottom: 30px;
+        left:0;
+      }*/
+      .abs-box {
+        width: 400px;
+        height: 400px;
+        background-color: yellow;
+        position: relative; /*포지션이 relative는 absolute에 영향을 준다*/
+      }
+      .abs-child {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="abs-box">
+      <div class="abs-child"></div>
+    </div>
+    <div id="boxOne">
+      <div class="box-child"></div>
+    </div>
+    <div id="boxTwo">
+      <div class="box-child"></div>
+    </div>
+  </body>
+</html>
+
+<!--div.box>div.box-child >> "box"클래스의 div에 "box-child" 클래스의 div가 생성된다-->
+<!-- static: 페이지 내 정해진 위치, fixed: 화면 내에서 위치가 안 변한다-->
+<!--absolute: 어디에든 붙일 수 있지만 스크롤한다고 보이지 않는다(relative와의 관계 중요)-->
+<!--absolute를 사용하면 html상에서 해당 element와 관계가 있는(relative-부모박스)element 살펴보고 포지션 결정
+    (관계 없으면 설정한 대로 움직인다)-->

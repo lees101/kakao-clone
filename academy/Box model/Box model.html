@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewprot" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Box Model</title>
+    <style>
+      body,
+      html {
+        padding: 0;
+        margin: 0;
+        background-color: green;
+        height: 100%;
+      }
+      .box {
+        background-color: yellow;
+        width: 50%;
+        height: 50%;
+        padding: 20px 10px 5px 2px;
+        margin-top: 50px;
+        margin-left: 50px;
+      }
+      .inside-box {
+        background-color: blue;
+        width: 50%;
+        height: 50%;
+        border-width: 5px;
+        border-style: dashed;
+        border-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="inside-box"></div>
+    </div>
+  </body>
+</html>
+
+<!--Margin->Border->Padding->Content 순으로 여백->경계->간격->내용물 이 된다-->
+<!--패딩과 마진에서 상 우 하 좌 방향으로 값을 설정 해줄 수 있다-->
+<!--border: 5px dashed red와 같다-->
